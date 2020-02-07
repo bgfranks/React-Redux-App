@@ -6,12 +6,12 @@ export const FETCH_DATA = 'FETCH_DATA'
 export const getData = () => dispatch => {
   dispatch({ type: FETCH_DATA })
   axios
-    .get('http://dnd5eapi.co/api/classes/')
+    .get('https://cors-anywhere.herokuapp.com/http://dnd5eapi.co/api/classes/')
     .then(res => {
-      console.log(res)
-      dispatch({ type: GET_CLASSES, payload: res.data })
+      console.log(res.data.results)
+      dispatch({ type: GET_CLASSES, payload: res.data.results })
     })
-    .err(err => {
+    .catch(err => {
       console.log(err)
     })
 }
