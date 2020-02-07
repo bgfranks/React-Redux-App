@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   font-family: 'Cinzel Decorative', cursive;
-  background: url('./images/dnd-background.png') no-repeat center center fixed;
+  background: linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.75)),
+    url('./images/dnd.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 150vh;
 }
